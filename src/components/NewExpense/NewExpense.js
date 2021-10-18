@@ -1,5 +1,5 @@
-// technically React import is not required. JSX uses this under the hood
 import React from "react";
+
 import ExpenseForm from "./ExpenseForm";
 import "./NewExpense.css";
 
@@ -9,7 +9,6 @@ const NewExpense = (props) => {
       ...enteredExpenseData,
       id: Math.random().toString(),
     };
-    // console.log(expenseData);
     props.onAddExpense(expenseData);
   };
 

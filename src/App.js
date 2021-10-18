@@ -1,31 +1,41 @@
+import React, { useState } from "react";
 import "./App.css";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+
+const DUMMY_EXPENSES = [
+  {
+    id: "e1",
+    title: "Car Insurance",
+    amount: 203.03,
+    date: new Date(2021, 2, 28),
+  },
+  {
+    id: "e2",
+    title: "Health Insurance",
+    amount: 473.3,
+    date: new Date(2012, 2, 19),
+  },
+  {
+    id: "e3",
+    title: "General Insurance",
+    amount: 94.45,
+    date: new Date(2013, 3, 13),
+  },
+  {
+    id: "e4",
+    title: "Investment Plan",
+    amount: 104.9,
+    date: new Date(2017, 4, 17),
+  },
+];
 const App = () => {
-  const expenses = [
-    {
-      id: "e1",
-      title: "Car Insurance",
-      amount: 203.03,
-      date: new Date(2021, 2, 28),
-    },
-    {
-      id: "e2",
-      title: "Health Insurance",
-      amount: 473.3,
-      date: new Date(2012, 2, 19),
-    },
-    {
-      id: "e3",
-      title: "General Insurance",
-      amount: 94.45,
-      date: new Date(2013, 3, 13),
-    },
-  ];
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
   const addExpenseHandler = (expense) => {
-    console.log("In App.js");
-    console.log(expense);
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
   };
 
   // return React.createElement(
