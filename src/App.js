@@ -14,19 +14,19 @@ const DUMMY_EXPENSES = [
     id: "e2",
     title: "Health Insurance",
     amount: 473.3,
-    date: new Date(2012, 2, 19),
+    date: new Date(2021, 2, 19),
   },
   {
     id: "e3",
     title: "General Insurance",
     amount: 94.45,
-    date: new Date(2013, 3, 13),
+    date: new Date(2019, 3, 13),
   },
   {
     id: "e4",
     title: "Investment Plan",
     amount: 104.9,
-    date: new Date(2017, 4, 17),
+    date: new Date(2020, 4, 17),
   },
 ];
 const App = () => {
